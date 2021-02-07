@@ -8,6 +8,8 @@ var sanitizehtml = require('sanitize-html');
 var qs = require('querystring');
 var bodyParser = require('body-parser');
 var compression = require('compression')
+var helmet = require('helmet')
+app.use(helmet())
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
